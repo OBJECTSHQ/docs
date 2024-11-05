@@ -1,6 +1,6 @@
 # docs.objects.vision
 
-Documentation for the Objects Protocol
+Documentation for the **OBJECTS** Protocol
 
 ### Getting Started
 
