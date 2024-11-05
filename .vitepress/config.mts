@@ -21,8 +21,18 @@ export default defineConfig({
         {
           text: 'Introduction',
           items: [
-            { text: 'What is OBJECTS?', link: '/learn/' },
-            { text: 'Core Concepts', link: '/learn/core-concepts' }
+            { text: 'What is OBJECTS?', link: '/learn/' }
+          ],
+        },
+        {
+          text: 'Core Concepts',
+          items: [
+            { text: 'Accounts', link: '/learn/core-concepts/accounts' }
+          ]
+        },{
+          text: 'Architecture',
+          items: [
+            { text: 'Overview', link: '/learn/architecture/overview' }
           ]
         }
       ],
