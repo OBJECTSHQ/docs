@@ -6,13 +6,16 @@ export default defineConfig({
   description: "Documentation for OBJECTS Protocol",
   cleanUrls: true,
   appearance: 'dark',
-  
+  rewrites: {
+    '/': '/learn/'
+  },
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: 'Learn', link: '/learn/' },
       { text: 'Developers', link: '/developers/' }
     ],
+    
     search: {
       provider: 'local'
     },
@@ -23,12 +26,6 @@ export default defineConfig({
           items: [
             { text: 'What is OBJECTS?', link: '/learn/' }
           ],
-        },
-        {
-          text: 'Core Concepts',
-          items: [
-            { text: 'Accounts', link: '/learn/core-concepts/accounts' }
-          ]
         },{
           text: 'Architecture',
           items: [
@@ -38,10 +35,9 @@ export default defineConfig({
       ],
       '/developers/': [
         {
-          text: 'Development Guide',
           items: [
-            { text: 'Overview', link: '/developers/' },
-            { text: 'API Reference', link: '/developers/api' }
+            { text: 'Quick Start', link: '/developers/' },
+            { text: 'Community', link: '/developers/community' }
           ]
         }
       ]

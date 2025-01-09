@@ -13,6 +13,7 @@ hero:
       text: Developers
       link: /developers/
 
+   
 # features:
 #   - title: Feature A
 #     details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
