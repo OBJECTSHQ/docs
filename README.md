@@ -1,8 +1,5 @@
-# docs.objects.vision
+# OBJECTS [Protocol docs]
 
-Documentation for the **OBJECTS** Protocol
-
-### Getting Started
-
-1. Run `pnpm install`
-2. Run `pnpm docs:dev`
+Getting started
+1. Run `bun install`
+2. Run `bun run dev`

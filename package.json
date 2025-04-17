@@ -1,10 +1,20 @@
 {
-  "devDependencies": {
-    "vitepress": "^1.5.0"
-  },
-  "scripts": {
-    "docs:dev": "vitepress dev",
-    "docs:build": "vitepress build",
-    "docs:preview": "vitepress preview"
-  }
+	"name": "objects-docs",
+	"private": true,
+	"version": "0.0.0",
+	"type": "module",
+	"scripts": {
+		"dev": "vocs dev",
+		"build": "vocs build",
+		"preview": "vocs preview"
+	},
+	"dependencies": {
+		"react": "latest",
+		"react-dom": "latest",
+		"vocs": "latest"
+	},
+	"devDependencies": {
+		"@types/react": "latest",
+		"typescript": "latest"
+	}
 }
