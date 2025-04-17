@@ -15,14 +15,17 @@ export default defineConfig({
 			google: "IBM Plex Mono",
 		},
 	},
-	// iconUrl: {
-	// 	light: "/logo.svg",
-	// 	dark: "/logo.svg",
-	// },
-	// logoUrl: {
-	// 	light: "/logo.svg",
-	// 	dark: "/logo.svg",
-	// },
+	theme: {
+		accentColor: "#B0C7CC",
+	},
+	iconUrl: {
+		light: "/faviconLight.svg",
+		dark: "/faviconDark.svg",
+	},
+	logoUrl: {
+		light: "/logoLight.svg",
+		dark: "/logoDark.svg",
+	},
 	sidebar: [
 		{
 			text: "Introduction",
