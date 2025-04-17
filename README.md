@@ -1,5 +1,5 @@
-# OBJECTS [Protocol docs]
+# OBJECTS Documentation
 
-Getting started
+## Getting started
 1. Run `bun install`
 2. Run `bun run dev`
