@@ -53,12 +53,12 @@ export default defineConfig({
 	],
 	socials: [
 		{
-			icon: "github",
-			link: "https://github.com/objectshq",
-		},
-		{
 			icon: "x",
 			link: "https://twitter.com/objectsvision",
+		},
+		{
+			icon: "github",
+			link: "https://github.com/objectshq",
 		},
 		{
 			icon: "warpcast",

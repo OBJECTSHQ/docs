@@ -1,0 +1,11 @@
+# OBJECTS Docs
+
+> Build user friendly physical design apps with OBJECTS
+
+## Docs
+
+- [Introduction](/introduction): OBJECTS is an open protocol & network for developing physical design apps
+- [Overview](/architecture/overview): P2P network based on gossipsub that creates an identity and associates 3D CAD data to it.
+- [Accounts](/core-concepts/accounts)
+- [Coming soon](/developers/api)
+- [Coming soon](/developers)
