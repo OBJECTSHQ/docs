@@ -18,6 +18,8 @@ export default defineConfig({
 	theme: {
 		accentColor: "#B0C7CC",
 	},
+	ogImageUrl:
+		"https://vocs.dev/api/og?logo=%logo&title=%title&description=%description",
 	iconUrl: {
 		light: "/faviconLight.svg",
 		dark: "/faviconDark.svg",
