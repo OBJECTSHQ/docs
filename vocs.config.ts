@@ -19,7 +19,7 @@ export default defineConfig({
 		accentColor: "#B0C7CC",
 	},
 	ogImageUrl:
-		"https://https://objectsdocs-ogimage.vercel.app/api/og?logo=%logo&title=%title&description=%description",
+		"https://objectsdocs-ogimage.vercel.app/api/og?logo=%logo&title=%title&description=%description",
 	iconUrl: {
 		light: "/faviconLight.svg",
 		dark: "/faviconDark.svg",
