@@ -1,3 +1,7 @@
+---
+title: Overview
+description: An introduction to the core concepts of the architecture.
+---
 # Overview
 P2P network based on gossipsub that creates an identity and associates 3D CAD data to it.
 ## Application Layer
