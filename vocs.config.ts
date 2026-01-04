@@ -16,7 +16,7 @@ export default defineConfig({
 		},
 	},
 	theme: {
-		accentColor: "#B0C7CC",
+		accentColor: "#000000",
 	},
 	ogImageUrl: {
 		"/": "https://vocs.dev/api/og?logo=%logo&title=%title&description=%description",
@@ -24,12 +24,12 @@ export default defineConfig({
 			"https://vocs.dev/api/og?logo=%logo&title=%title&description=%description",
 	},
 	iconUrl: {
-		light: "/faviconLight.svg",
-		dark: "/faviconDark.svg",
+		light: "/Logo-Color.svg",
+		dark: "/Logo-Color.svg",
 	},
 	logoUrl: {
-		light: "/logoLight.svg",
-		dark: "/logoDark.svg",
+		light: "/Wordmark.svg",
+		dark: "/Wordmark.svg",
 	},
 	sidebar: [
 		{
@@ -62,7 +62,7 @@ export default defineConfig({
 	socials: [
 		{
 			icon: "x",
-			link: "https://twitter.com/objectsvision",
+			link: "https://twitter.com/OBJECTS____",
 		},
 		{
 			icon: "github",
