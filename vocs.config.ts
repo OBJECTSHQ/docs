@@ -17,11 +17,14 @@ export default defineConfig({
 		},
 	},
 	theme: {
-		accentColor: "#000000",
+		accentColor: {
+			light: "black",
+			dark: "white",
+		},
 	},
 	ogImageUrl: {
 		"/": "https://vocs.dev/api/og?logo=%logo&title=%title&description=%description",
-		"/introduction":
+		"/overview":
 			"https://vocs.dev/api/og?logo=%logo&title=%title&description=%description",
 	},
 	iconUrl: {
@@ -30,36 +33,34 @@ export default defineConfig({
 	},
 	logoUrl: {
 		light: "/Wordmark.svg",
-		dark: "/Wordmark.svg",
+		dark: "/Wordmark-Dark.svg",
 	},
-	sidebar: [
-		{
-			text: "Introduction",
-			link: "/introduction",
-		},
-		{
-			text: "Core Concepts",
-			items: [
-				{
-					text: "Overview",
-					link: "/core-concepts/overview",
-				},
-				{
-					text: "Accounts",
-					link: "/core-concepts/accounts",
-				},
-			],
-		},
-		{
-			text: "Architecture",
-			items: [
-				{
-					text: "Overview",
-					link: "/architecture/overview",
-				},
-			],
-		},
+	topNav: [
+		{ text: "Overview", link: "/overview" },
+		{ text: "Protocol", link: "/protocol" },
+		{ text: "Network", link: "/network" },
+		{ text: "App", link: "/app" },
 	],
+	sidebar: {
+		"/overview": [{ text: "Introduction", link: "/overview" }],
+		"/protocol": [
+			{ text: "Overview", link: "/protocol" },
+			{ text: "Identity", link: "/protocol/identity" },
+			{ text: "Data Model", link: "/protocol/data-model" },
+			{ text: "Operations", link: "/protocol/operations" },
+			{ text: "History", link: "/protocol/history" },
+			{ text: "Sync", link: "/protocol/sync" },
+			{ text: "Transport", link: "/protocol/transport" },
+		],
+		"/network": [
+			{ text: "Overview", link: "/network" },
+			{ text: "Registry", link: "/network/registry" },
+			{ text: "Index", link: "/network/indexing" },
+			{ text: "Relay", link: "/network/relay" },
+			{ text: "Discovery", link: "/network/discovery" },
+		],
+		"/app": [{ text: "Overview", link: "/app" }],
+	},
 	socials: [
 		{
 			icon: "x",

@@ -19,12 +19,18 @@ bun run preview  # Preview production build
 
 ```
 docs/
-├── pages/          # Documentation pages (MDX/MD)
-│   ├── index.mdx   # Homepage (landing layout)
-│   └── ...         # Other doc pages
-├── public/         # Static assets (logos, images)
-└── footer.tsx      # Custom footer component
-vocs.config.ts      # Vocs configuration
+├── pages/
+│   ├── index.mdx      # Homepage (landing layout)
+│   ├── overview/      # Introduction section
+│   ├── protocol/      # Protocol docs (identity, data-model, operations, etc.)
+│   ├── network/       # Network docs (registry, indexing, relay, discovery)
+│   └── app/           # App docs
+├── public/
+│   ├── Logo-Color.svg      # Favicon (light/dark)
+│   ├── Logo-Color-Alt.svg  # Alternative logo
+│   ├── Wordmark.svg        # Sidebar logo (light mode)
+│   └── Wordmark-Dark.svg   # Sidebar logo (dark mode)
+vocs.config.ts              # Vocs configuration
 ```
 
 ## Code Style
@@ -44,7 +50,7 @@ Avoid:
 - XML declarations (`<?xml ...?>`) and DOCTYPEs
 - Extra namespaces (`xmlns:xlink`, `xmlns:serif`)
 - Deeply nested group wrappers
-- Inline styles (`style="fill: rgb(...)"`) - use `fill` attribute instead
+- Inline styles (`style="fill: rgb(...);"`) - use `fill` attribute instead
 
 ### Documentation Pages
 
@@ -55,10 +61,13 @@ Avoid:
 ## Configuration
 
 Main config is in `vocs.config.ts`:
-- `logoUrl` - Logo for sidebar/header
-- `iconUrl` - Favicon
-- `sidebar` - Navigation structure
-- `socials` - Social links (Twitter, GitHub, Warpcast)
+- `basePath` - URL base path (`/docs`)
+- `logoUrl` - Sidebar/header logo (light: `Wordmark.svg`, dark: `Wordmark-Dark.svg`)
+- `iconUrl` - Favicon (`Logo-Color.svg`)
+- `topNav` - Top navigation (Overview, Protocol, Network, App)
+- `sidebar` - Section-specific navigation structure
+- `socials` - Social links (X, GitHub, Warpcast)
+- `font` - IBM Plex Sans (default), IBM Plex Mono (code)
 
 ## Agent Guidelines
 
