@@ -5,7 +5,7 @@ description: How accounts and keys are managed in the OBJECTS protocol.
 
 # Identity
 
-The identity layer provides portable, user-owned identities for the OBJECTS protocol. Users can create an identity using passkeys (WebAuthn) or Ethereum wallets, associate human-readable handles, and optionally link wallet addresses for payments.
+The identity layer provides portable, user-owned identities for the OBJECTS protocol. Users can create an identity using passkeys, associate human-readable handles, and optionally link wallet addresses for payments.
 
 ## Design Goals
 
