@@ -1,26 +1,36 @@
 ---
-tite: Introduction to OBJECTS
+title: Introduction to OBJECTS
 description: An overview of OBJECTS—an open protocol for developing physical design apps.
 ---
+
 # Introduction [OBJECTS is an open protocol & network for developing physical design apps]
 
-## Key Features
-- **Permissionless Development**: Developers can build design & manufacturing apps for the network of users without needing centralized approval.
-- **Portable Account**: Users own their identity and design data that can be seamlessly transferred to other apps.
-- **Interoperable CAD Data**: Users can access their design data in the file format native to the apps built with the protocol.
-- **Secure & Private**: All user data and communications are end-to-end encrypted, ensuring complete privacy and security.
-- **Network**
+## Core Principles
 
-## Architecture
-- **Content Addressability**: Data is stored and retrieved using unique content addresses, ensuring data integrity.
-- **Peer-to-Peer Protocols**: Direct communication between peers enhances efficiency and reduces reliance on central servers.
+- **Local-first**: Data is stored locally and synced peer-to-peer. Apps work offline by default with no central server dependency.
+- **Mobile-friendly**: Built on QUIC for reliable connectivity across network transitions and intermittent connections.
+- **User-owned**: Identity and data belong to users, not apps. Users can switch apps without data migration.
+- **Peer-to-peer**: Direct device-to-device communication. No intermediary required for data access or sync.
+
+## Key Features
+
+- **Portable Identity**: Passkey-based identity that works across all apps built on the protocol.
+- **Interoperable Data**: Shared data model allows apps to read and write the same design files.
+- **End-to-end Encrypted**: All data and communications encrypted by default.
+- **Permissionless**: Build and ship apps without platform approval or API keys.
 
 ## Use Cases
-- **Collaborative Design**: Multiple users can work on the same CAD project in real-time.
-- **Data Integrity**: Ensures that CAD data remains unchanged and verifiable across its lifecycle.
 
-## Getting Started
-To start using OBJECTS Protocol, follow these steps: ***Coming soon***
+- **Collaborative Design**: Real-time multi-user editing with automatic conflict resolution.
+- **Offline-first Apps**: Full functionality without connectivity, sync when available.
+- **Cross-app Workflows**: Users move designs between apps without export/import friction.
 
-## Community and Support
-Join our community to get support, share your projects, and contribute to the development of the protocol.
+## Explore
+
+- **[Protocol](/protocol)** — Understand the architecture
+- **[Network](/network)** — Connect to public services
+- **[App](/app)** — Build your first app
+
+## Community
+
+Join the [OBJECTS group chat](https://popup.convos.org/v2?i=CoICCj8BvlZwfPJmGJ7SWjGWHg1-z2hw4SWQSoJUHu_vqdniVG9n-FkAULKGxMx7y_ptFfeo8uomGsZtVH-9FdwpTcsSIBdXr9yNAWiXrNMdpR9tCP-JAJWwEAJ7nl7K3spYJV0XGgp5SFJXb0poZWs4IgdPQkpFQ1RTKgAyhQFodHRwczovL2NvbnZvcy1hc3NldHMtY29udm9zLW90ci1wcm9kLTIwMjUwODI2MTY0MjA4NDA5ODAwMDAwMDE5LnMzLnVzLWVhc3QtMi5hbWF6b25hd3MuY29tL2Q3YTFm*YTE4LTM5MmEtNDMwYS1hNGEwLWY0ODUyNTA3ZGJmYy5qcGVnEkEuzQ9ibSJX53hppf9zPGU10FTNaWezxdt0UflTRgFDjiYZmXHFn9K8XqmR0nLn_I-C-aFtOCuDWkNNp15eQXVPAQ) to get support, share your projects, and contribute to the development of the protocol.

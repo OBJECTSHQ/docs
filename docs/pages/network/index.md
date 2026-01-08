@@ -1,15 +1,15 @@
 ---
 title: Network
-description: Overview of the OBJECTS network infrastructure layers
+description: Public services that power the OBJECTS network.
 ---
 
 # Network
 
-The OBJECTS network is built on a layered infrastructure designed for decentralized, peer-to-peer communication and data exchange. This section covers the core components that make up the network architecture.
+Public services that power the OBJECTS network. Connect to these to register identities, discover peers, and sync data.
 
-## Layers
+## Services
 
-- [**Registry**](/network/registry) - Service for registering and looking up identities across the network
-- [**Index**](/network/indexing) - Content indexing and lookup infrastructure
-- [**Relay**](/network/relay) - Data relay for peer-to-peer communication
-- [**Discovery**](/network/discovery) - Mechanisms for finding peers and content on the network
+- **[Registry](/network/registry)** — Identity registration and lookup
+- **[Indexing](/network/indexing)** — Content search and asset queries
+- **[Relay](/network/relay)** — NAT traversal and peer connectivity
+- **[Discovery](/network/discovery)** — Peer finding and network joining
