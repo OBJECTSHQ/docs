@@ -12,8 +12,8 @@ The identity layer provides portable, user-owned identities for the OBJECTS prot
 | Goal | Description |
 |------|-------------|
 | User Ownership | Users control their identity with no platform lock-in |
-| Passkey-First | Non-crypto users can create identity without a wallet |
-| Wallet Optional | Crypto users can link a wallet for payments |
+| Passkey-First | Users can create identity without a wallet |
+| Wallet Optional | Users can link a wallet for payments |
 | Portable | Identity can be exported and verified independently |
 | Pseudonymous | No PII required; handles are user-chosen aliases |
 
@@ -66,17 +66,17 @@ OBJECTS supports two types of cryptographic signers:
 
 ### Passkey (WebAuthn)
 
-Passkeys use the **secp256r1 (P-256)** curve via the WebAuthn standard. This enables biometric authentication (Face ID, Touch ID, Windows Hello) without requiring users to manage cryptocurrency wallets.
+Passkeys use the **secp256r1 (P-256)** curve via the WebAuthn standard. This enables biometric authentication (Face ID, Touch ID, Windows Hello) without requiring users to manage wallets or keys.
 
 - Device-native authentication
 - Synced across devices via iCloud/Google/1Password
 - No seed phrases to manage
 
-### Wallet (Ethereum)
+### Wallet
 
-Ethereum wallets use the **secp256k1** curve with EIP-191/EIP-712 signatures. This enables integration with the existing Ethereum ecosystem.
+Wallets use the **secp256k1** curve with standard signing schemes. This enables integration with existing wallet infrastructure.
 
-- Connect existing wallet (MetaMask, Rainbow, etc.)
+- Connect an existing wallet
 - Link wallet for payments and licensing
 - Sign with familiar wallet UX
 
@@ -93,7 +93,7 @@ Creates a new identity with a handle. The user signs a message proving ownership
 
 ### Link Wallet
 
-Links an Ethereum wallet address to an existing passkey identity. This enables payment functionality while keeping the passkey as the primary authentication method.
+Links a wallet address to an existing passkey identity. This enables payment functionality while keeping the passkey as the primary authentication method.
 
 **Requirements:**
 - Both the identity signer AND wallet must sign
@@ -167,12 +167,3 @@ Version 0.2 will add recovery mechanisms:
 - Handles are user-chosen and may or may not contain PII
 - Registry data is public
 - Wallet addresses are public by design
-
-## References
-
-The OBJECTS identity protocol draws from proven patterns in:
-
-- [XMTP XIP-46](https://github.com/xmtp/XIPs/blob/main/XIPs/xip-46-multi-wallet-identity.md) — Multi-wallet identity with inbox ID derived from initial signer
-- [AT Protocol did:plc](https://web.plc.directory/spec/v0.1/did-plc) — Genesis operation hash with rotation key hierarchy
-- [WebAuthn](https://www.w3.org/TR/webauthn-2/) — Web Authentication API for passkey support
-- [EIP-712](https://eips.ethereum.org/EIPS/eip-712) — Typed structured data hashing and signing

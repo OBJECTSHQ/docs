@@ -44,9 +44,7 @@ export default defineConfig({
 		"/protocol": [
 			{ text: "Overview", link: "/protocol" },
 			{ text: "Identity", link: "/protocol/identity" },
-			{ text: "Data Model", link: "/protocol/data-model" },
-			{ text: "Operations", link: "/protocol/operations" },
-			{ text: "History", link: "/protocol/history" },
+			{ text: "Data", link: "/protocol/data" },
 			{ text: "Sync", link: "/protocol/sync" },
 			{ text: "Transport", link: "/protocol/transport" },
 		],
