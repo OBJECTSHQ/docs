@@ -2,7 +2,6 @@ import { defineConfig } from "vocs";
 
 export default defineConfig({
 	baseUrl: "https://objects.foundation",
-	basePath: "/docs",
 	title: "OBJECTS Docs",
 	description: "Build user friendly physical design apps with OBJECTS",
 	editLink: {
@@ -24,7 +23,7 @@ export default defineConfig({
 		},
 	},
 	ogImageUrl:
-		"https://vocs.dev/api/og?logo=https%3A%2F%2Fobjects.foundation%2Fdocs%2FLogo-Color.svg&title=%title&description=%description",
+		"https://vocs.dev/api/og?logo=%logo&title=%title&description=%description",
 	iconUrl: {
 		light: "/Logo-Color.svg",
 		dark: "/Logo-Color.svg",
