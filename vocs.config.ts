@@ -2,6 +2,7 @@ import { defineConfig } from "vocs";
 
 export default defineConfig({
 	baseUrl: "https://objects.foundation",
+	basePath: "/docs",
 	title: "OBJECTS Docs",
 	description: "Build user friendly physical design apps with OBJECTS",
 	editLink: {
