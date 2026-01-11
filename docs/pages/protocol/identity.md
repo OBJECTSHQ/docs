@@ -29,7 +29,7 @@ A nonce is included in the derivation, allowing users to create multiple identit
 
 ## Handles
 
-Handles are human-readable aliases displayed as `@username`. They use lowercase letters, numbers, underscores, and periods. Handles are unique and can be changed — the old handle becomes available for others to claim.
+Handles are human-readable aliases displayed as `@username`. They use lowercase letters, numbers, underscores, and periods. Handles are unique and can be changed. The old handle becomes available for others to claim.
 
 ## Signer Types
 
