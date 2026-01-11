@@ -5,16 +5,16 @@ description: Asset schemas, operations, versioning, and history in the OBJECTS p
 
 # Data
 
-The data layer provides structure for content in the OBJECTS protocol. It defines core data types (Asset, Project, and Reference) that applications use to organize and interoperate on design data.
+The data layer defines schemas for content in the OBJECTS protocol. It specifies Asset, Project, and Reference, the core primitives that enable interoperability across applications.
 
 ## Design Goals
 
 | Goal | Description |
 | --- | --- |
-| Generic | Data types work across applications |
+| Structured | Defined schemas for protocol primitives |
 | Minimal | Only essential primitives defined |
-| Extensible | Applications add domain-specific metadata |
-| Sync-Native | Maps cleanly to sync layer primitives |
+| Opinionated | Fixed fields ensure interoperability across applications |
+| Interoperable | Common vocabulary enables data exchange across applications |
 
 ## Data Types
 
@@ -28,18 +28,18 @@ The protocol defines three core types:
 
 ### Asset
 
-An Asset is the fundamental unit of content. It represents a versioned piece of content (CAD file, image, document) with associated metadata.
+An Asset is the fundamental unit of content. It represents a versioned piece of content with associated metadata.
 
 | Field | Description |
 | --- | --- |
 | id | Unique identifier within project |
 | name | Human-readable name |
+| author_id | Identity ID of the asset creator |
 | content_hash | BLAKE3 hash of content (32 bytes) |
 | content_size | Size of content in bytes |
 | format | MIME type or format identifier (optional) |
 | created_at | Creation timestamp |
 | updated_at | Last update timestamp |
-| metadata | Application-specific data (optional) |
 
 The `content_hash` serves as a version identifier. Same content produces the same hash. No separate version numbering is required.
 
@@ -52,9 +52,9 @@ A Project is an organizational grouping of assets. It maps 1:1 with a sync layer
 | id | Unique identifier (derived from ReplicaId) |
 | name | Human-readable name |
 | description | Project description (optional) |
+| owner_id | Identity ID of the project owner |
 | created_at | Creation timestamp |
 | updated_at | Last update timestamp |
-| metadata | Application-specific data (optional) |
 
 This means:
 
