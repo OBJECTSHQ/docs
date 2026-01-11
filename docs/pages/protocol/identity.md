@@ -10,7 +10,7 @@ The identity layer provides portable, user-owned identities for the OBJECTS prot
 ## Design Goals
 
 | Goal | Description |
-|------|-------------|
+| --- | --- |
 | User Ownership | Users control their identity with no platform lock-in |
 | Passkey-First | Users can create identity without a wallet |
 | Wallet Optional | Users can link a wallet for payments |
