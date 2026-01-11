@@ -5,7 +5,7 @@ description: How data moves between nodes in the OBJECTS protocol.
 
 # Transport
 
-The transport layer provides peer-to-peer connectivity for the OBJECTS protocol. It handles connection establishment, NAT traversal, and peer discovery using QUIC — a modern transport protocol built on UDP.
+The transport layer provides peer-to-peer connectivity for the OBJECTS protocol. It handles connection establishment, NAT traversal, and peer discovery using QUIC, a modern transport protocol built on UDP.
 
 ## Design Goals
 

@@ -5,7 +5,7 @@ description: Asset schemas, operations, versioning, and history in the OBJECTS p
 
 # Data
 
-The data layer provides structure for content in the OBJECTS protocol. It defines core data types — Asset, Project, and Reference — that applications use to organize and interoperate on design data.
+The data layer provides structure for content in the OBJECTS protocol. It defines core data types (Asset, Project, and Reference) that applications use to organize and interoperate on design data.
 
 ## Design Goals
 
@@ -41,7 +41,7 @@ An Asset is the fundamental unit of content. It represents a versioned piece of 
 | updated_at | Last update timestamp |
 | metadata | Application-specific data (optional) |
 
-The `content_hash` serves as a version identifier — same content produces the same hash. No separate version numbering is required.
+The `content_hash` serves as a version identifier. Same content produces the same hash. No separate version numbering is required.
 
 ### Project
 
