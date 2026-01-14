@@ -25,11 +25,35 @@ Each identity has a unique identifier derived from the user's signing key. Ident
 obj_7kd2zcx9f3m1qwerty
 ```
 
+### Derivation
+
+The identifier is derived using SHA-256 with Base58 encoding:
+
+```
+identity_id = "obj_" + base58(truncate(sha256(signer_public_key || nonce), 15))
+```
+
+| Component | Description |
+| --- | --- |
+| signer_public_key | 33-byte compressed SEC1 public key |
+| nonce | 8 bytes of cryptographic randomness |
+| truncate(x, n) | First n bytes of x |
+
 A nonce is included in the derivation, allowing users to create multiple identities from the same key if needed.
 
 ## Handles
 
-Handles are human-readable aliases displayed as `@username`. They use lowercase letters, numbers, underscores, and periods. Handles are unique and can be changed. The old handle becomes available for others to claim.
+Handles are human-readable aliases displayed as `@username`.
+
+| Constraint | Requirement |
+| --- | --- |
+| Length | 1-30 characters including periods |
+| Characters | Lowercase a-z, digits 0-9, underscore, period |
+| Start/End | Must not start with period or underscore; must not end with period |
+| Uniqueness | Case-insensitive unique across registry |
+| Reserved | Cannot use reserved words (admin, root, system, etc.) |
+
+Handles can be changed. The old handle becomes available for others to claim.
 
 ## Signer Types
 
@@ -73,6 +97,33 @@ Signs an asset (design file, CAD model, etc.) to prove ownership. The signature 
 
 Authenticates to an application by signing a challenge. Applications generate a random challenge, the user signs it, and the application verifies the signature.
 
+## Vault Discovery
+
+User vaults enable private, cross-application project discovery without centralized infrastructure.
+
+### Vault Namespace
+
+Each identity has a private vault namespace derived from the signing key. The vault namespace cannot be computed without the identity's secret key, ensuring project catalogs remain private by default.
+
+| Property | Description |
+| --- | --- |
+| Derivation | HKDF-SHA256 from signing key secret |
+| Privacy | Only identity owner can compute namespace |
+| Access | Apps request vault access from wallet |
+| Discovery | Apps sync vault to discover user's projects |
+
+### Discovery Flow
+
+Applications discover projects through the vault pattern:
+
+1. User authenticates to app (signs challenge)
+2. App requests vault access from wallet
+3. Wallet derives namespace and returns read-only ticket
+4. App syncs encrypted vault and requests decryption key
+5. App discovers project IDs and syncs individual projects
+
+The vault enables seamless cross-app data portability while preserving user privacy.
+
 ## Registry
 
 The registry stores identities and provides resolution services. Identities can be looked up by ID, handle, public key, or linked wallet address.
@@ -89,4 +140,4 @@ Version 0.2 will add recovery mechanisms including multiple passkeys across devi
 
 ### Privacy
 
-Identity IDs are pseudonymous with no PII in the derivation. Handles are user-chosen and may or may not contain PII. Registry data and wallet addresses are public by design.
+Identity IDs are pseudonymous with no PII in the derivation. Handles are user-chosen and may or may not contain PII. Registry data and wallet addresses are public by design. Vault namespaces are derived privately from signing keys, preventing enumeration of user projects without explicit permission.

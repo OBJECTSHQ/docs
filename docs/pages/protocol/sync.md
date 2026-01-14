@@ -42,9 +42,15 @@ Same content always produces the same 32-byte hash. This enables deduplication a
 
 ### Verified Streaming
 
-Blob transfer uses BLAKE3 verified streaming. Content is verified in 16 KiB chunks as it arrives. Corrupted data is rejected immediately without waiting for the full transfer.
+Blob transfer uses BLAKE3 verified streaming with BAO (BLAKE3 Authenticated Output).
 
-Nodes can request byte ranges for partial or resumed transfers, making large file sync resilient to network interruptions.
+| Parameter | Value |
+| --- | --- |
+| Chunk size | 1024 bytes |
+| Chunk group size | 16 KiB (16 chunks) |
+| Verification granularity | Per chunk group |
+
+Content is verified incrementally as it arrives. Corrupted data is rejected immediately without waiting for the full transfer. Nodes can request byte ranges for partial or resumed transfers, making large file sync resilient to network interruptions.
 
 ### Collections
 
@@ -65,10 +71,10 @@ An Entry associates a key with a blob reference:
 | Field | Description |
 | --- | --- |
 | key | Application-defined key (path, ID, etc.) |
-| author | Signing key of entry creator |
-| hash | Reference to blob content |
-| size | Size of referenced blob |
-| timestamp | When the entry was created |
+| author | Ed25519 public key of entry creator |
+| hash | BLAKE3 hash reference to blob content |
+| size | Size of referenced blob in bytes |
+| timestamp | Unix timestamp in microseconds when entry was created |
 
 Entries are signed by the author's private key. Multiple authors can write to the same key. Each author's entry is preserved independently.
 
@@ -116,6 +122,40 @@ A Ticket encodes everything needed to sync specific data. Tickets are designed f
 | Doc ticket (write) | Replica secret + peer | Write access to replica |
 
 Write tickets must be treated as secrets. Sharing one grants full write access to the replica.
+
+## Vault Discovery
+
+User vaults enable private, decentralized project discovery. Unlike explicit tickets, vaults allow applications to discover all of a user's projects without centralized infrastructure.
+
+### Vault Access Pattern
+
+Applications cannot derive vault namespace IDs themselves. They must request vault access from the user's wallet or keyring.
+
+| Step | Actor | Action |
+| --- | --- | --- |
+| 1. Authenticate | User | Signs challenge with identity signer |
+| 2. Request Access | App | Requests vault ticket from wallet |
+| 3. Derive Namespace | Wallet | Derives namespace ID from signing key (HKDF-SHA256) |
+| 4. Issue Ticket | Wallet | Creates read-only DocTicket for vault |
+| 5. Sync Vault | App | Syncs vault replica using ticket |
+| 6. Request Key | App | Requests decryption key from wallet |
+| 7. Decrypt Catalog | App | Decrypts catalog entries to discover projects |
+| 8. Sync Projects | App | Syncs each discovered project replica |
+
+### Privacy Properties
+
+| Aspect | Privacy Level |
+| --- | --- |
+| Vault ID | Private (requires signing key) |
+| Catalog keys | Private (visible only after vault access) |
+| Catalog values | Encrypted (XChaCha20-Poly1305) |
+| Project IDs | Private (encrypted in catalog) |
+
+Without the identity signing key, vault namespace ID cannot be computed. This prevents enumeration of projects or correlation of vaults across identities.
+
+### Vault Availability
+
+Vaults may be hosted by user devices, self-hosted nodes, foundation seed nodes, or third-party services. The protocol does not mandate hosting location. If vaults are unavailable, applications fall back to explicit project ticket sharing.
 
 ## Consistency Model
 
