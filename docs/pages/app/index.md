@@ -7,6 +7,10 @@ description: Building applications on OBJECTS Protocol
 
 This section covers everything you need to know about building applications on the OBJECTS protocol.
 
+## Why Build on OBJECTS
+
+Launch apps faster by tapping into the OBJECTS network. Users already have accounts and data ready to go. Skip building authentication and user acquisition. Focus on your product instead.
+
 ## What to Expect
 
 This documentation will guide you through:

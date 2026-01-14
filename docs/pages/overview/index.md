@@ -9,15 +9,16 @@ description: An overview of OBJECTS—an open protocol for developing physical d
 
 - **Local-first**: Data is stored locally and synced peer-to-peer. Apps work offline by default with no central server dependency.
 - **Mobile-friendly**: Built on QUIC for reliable connectivity across network transitions and intermittent connections.
-- **User-owned**: Identity and data belong to users, not apps. Users can switch apps without data migration.
+- **User-owned**: One login, all your data. Switch apps instantly with a single account. Your projects follow you everywhere.
+- **Privacy-first**: Users control who accesses their data. Apps require explicit permission to read or sync your projects.
 - **Peer-to-peer**: Direct device-to-device communication. No intermediary required for data access or sync.
 
 ## Key Features
 
 - **Portable Identity**: Passkey-based identity that works across all apps built on the protocol.
 - **Interoperable Data**: Shared data model allows apps to read and write the same design files.
-- **End-to-end Encrypted**: All data and communications encrypted by default.
-- **Permissionless**: Build and ship apps without platform approval or API keys.
+- **End-to-end Encrypted**: All data and communications encrypted by default. Apps can only access your data with your explicit permission.
+- **Permissionless**: Build and ship apps without platform approval or API keys. Launch with instant access to users who already have accounts and data. Skip user acquisition from scratch.
 
 ## Use Cases
 
