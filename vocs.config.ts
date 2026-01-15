@@ -3,9 +3,6 @@ import { defineConfig } from "vocs";
 export default defineConfig({
 	title: "OBJECTS Docs",
 	description: "Build user friendly physical design apps with OBJECTS",
-	vite: {
-		base: "/docs/",
-	},
 	editLink: {
 		pattern: "https://github.com/objects/docs/edit/main/docs",
 		text: "Edit this page on GitHub",
