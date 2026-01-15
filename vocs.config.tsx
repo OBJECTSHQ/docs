@@ -5,6 +5,8 @@ export default defineConfig({
 	description: "Build user friendly physical design apps with OBJECTS",
 	head: (
 		<>
+			{/* Color scheme for Safari dark mode detection */}
+			<meta name="color-scheme" content="light dark" />
 			{/* Open Graph */}
 			<meta property="og:type" content="website" />
 			<meta property="og:site_name" content="OBJECTS Docs" />
