@@ -26,12 +26,12 @@ export default defineConfig({
 	ogImageUrl:
 		"https://vocs.dev/api/og?logo=%logo&title=%title&description=%description",
 	iconUrl: {
-		light: "/docs/Logo-Color.svg",
-		dark: "/docs/Logo-Color.svg",
+		light: "/Logo-Color.svg",
+		dark: "/Logo-Color.svg",
 	},
 	logoUrl: {
-		light: "/docs/Wordmark.svg",
-		dark: "/docs/Wordmark-Dark.svg",
+		light: "/Wordmark.svg",
+		dark: "/Wordmark-Dark.svg",
 	},
 	topNav: [
 		{ text: "Overview", link: "/overview" },
