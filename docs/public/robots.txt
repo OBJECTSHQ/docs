@@ -1,0 +1,6 @@
+# Allow all search engines and AI crawlers
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://docs.objects.foundation/sitemap.xml

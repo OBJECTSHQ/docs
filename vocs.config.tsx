@@ -3,6 +3,22 @@ import { defineConfig } from "vocs";
 export default defineConfig({
 	title: "OBJECTS Docs",
 	description: "Build user friendly physical design apps with OBJECTS",
+	head: (
+		<>
+			{/* Open Graph */}
+			<meta property="og:type" content="website" />
+			<meta property="og:site_name" content="OBJECTS Docs" />
+			<meta property="og:url" content="https://docs.objects.foundation" />
+			{/* Twitter Card */}
+			<meta name="twitter:card" content="summary_large_image" />
+			<meta name="twitter:site" content="@OBJECTS____" />
+			<meta name="twitter:creator" content="@OBJECTS____" />
+			{/* Additional SEO */}
+			<meta name="keywords" content="OBJECTS, physical design, protocol, network, app development" />
+			<meta name="author" content="OBJECTS" />
+			<link rel="canonical" href="https://docs.objects.foundation" />
+		</>
+	),
 	editLink: {
 		pattern: "https://github.com/objects/docs/edit/main/docs",
 		text: "Edit this page on GitHub",
