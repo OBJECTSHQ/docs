@@ -11,7 +11,10 @@
   /* Layout container (nav + content + footer) fills viewport */
   .vocs_DocsLayout_content:has(.landing-index) {
     position: fixed;
-    inset: var(--vocs-topNav_height) 0 0 0;
+    top: var(--vocs-topNav_height);
+    left: 0;
+    right: 0;
+    bottom: env(safe-area-inset-bottom, 0);
   }
 }
 
