@@ -8,10 +8,11 @@
     height: 100%;
   }
 
-  /* Fill entire viewport */
+  /* Fill entire viewport, account for nav bar */
   :has(.landing-index) [class*="DocsLayout_content"] {
     position: fixed;
     inset: 0;
+    padding-top: var(--vocs-topNav_height);
   }
 }
 
