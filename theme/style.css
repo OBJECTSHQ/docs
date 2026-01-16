@@ -1,14 +1,16 @@
-/* Mobile viewport fix for landing page */
-/* position: fixed + inset: 0 fills viewport without scroll */
+/* Modern mobile viewport fix for landing page */
+/* Uses dvh (dynamic viewport height) that updates as mobile browser UI shows/hides */
+/* Flexbox ensures content fills space below navigation bar */
 
 [data-layout="landing"] {
-  position: fixed;
-  inset: 0;
-  overflow: auto;
+  min-height: 100vh; /* Fallback */
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
 }
 
 [data-layout="landing"] .vocs_HomePage_root {
-  min-height: 100%;
+  flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;

@@ -5,3 +5,4 @@ dist
 .vite
 .claude
 research
+package-lock.json
