@@ -1,10 +1,13 @@
 import { defineConfig } from "vocs";
+import "./styles.css";
 
 export default defineConfig({
 	title: "OBJECTS Docs",
 	description: "Build user friendly physical design apps with OBJECTS",
 	head: (
 		<>
+			{/* Viewport with interactive-widget for mobile browser address bar handling */}
+			<meta name="viewport" content="width=device-width, initial-scale=1, interactive-widget=resizes-content" />
 			{/* Color scheme for Safari dark mode detection */}
 			<meta name="color-scheme" content="light dark" />
 			{/* Open Graph */}
