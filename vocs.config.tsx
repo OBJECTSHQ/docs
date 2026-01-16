@@ -42,6 +42,12 @@ export default defineConfig({
 			dark: "white",
 		},
 		variables: {
+			borderRadius: {
+				"0": "0",
+				"2": "2px",
+				"4": "4px",
+				"8": "8px",
+			},
 			color: {
 				background: {
 					light: "white",
