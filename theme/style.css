@@ -1,21 +1,18 @@
-/* Mobile landing page: fill viewport, no scroll */
+/* Mobile landing page: fit content to viewport */
 @media (max-width: 1080px) {
-  /* Lock scroll at document level for landing page */
+  /* Size document to dynamic viewport height */
   html:has([data-layout="landing"]) {
-    overflow: hidden;
-    height: 100svh;
+    height: 100dvh;
   }
 
   html:has([data-layout="landing"]) body {
-    overflow: hidden;
     height: 100%;
   }
 
-  /* Position content area to fill space below nav bar */
+  /* Content area fills space below nav bar */
   [data-layout="landing"] [class*="DocsLayout_content"] {
     position: fixed;
     inset: var(--vocs-topNav_height) 0 0 0;
-    overflow: hidden;
   }
 }
 
