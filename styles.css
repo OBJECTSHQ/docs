@@ -1,26 +1,15 @@
 /* Mobile viewport fix for landing page */
-/* Uses dvh (dynamic viewport height) to account for mobile browser address bar */
+/* position: fixed + inset: 0 fills viewport without scroll */
 
-/* Target the landing layout container */
 [data-layout="landing"] {
   position: fixed;
   inset: 0;
   overflow: auto;
 }
 
-/* Ensure the HomePage root fills the viewport properly on mobile */
 [data-layout="landing"] .vocs_HomePage_root {
-  min-height: 100dvh;
-  min-height: -webkit-fill-available;
+  min-height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
-}
-
-/* Fallback for browsers that don't support dvh */
-@supports not (min-height: 100dvh) {
-  [data-layout="landing"] .vocs_HomePage_root {
-    min-height: 100vh;
-    min-height: -webkit-fill-available;
-  }
 }
