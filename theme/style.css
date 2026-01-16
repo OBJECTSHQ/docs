@@ -1,23 +1,22 @@
-/* Mobile homepage: fit everything to viewport */
+/* Mobile landing index: fit page to viewport */
 @media (max-width: 1080px) {
-  /* Target pages with HomePage component */
-  html:has(.vocs_HomePage_root) {
+  html:has(.landing-index) {
     height: 100dvh;
   }
 
-  html:has(.vocs_HomePage_root) body {
+  html:has(.landing-index) body {
     height: 100%;
   }
 
   /* Fill entire viewport */
-  :has(.vocs_HomePage_root) [class*="DocsLayout_content"] {
+  :has(.landing-index) [class*="DocsLayout_content"] {
     position: fixed;
     inset: 0;
   }
 }
 
-/* Center homepage content vertically */
-.vocs_HomePage_root {
+/* Center landing index content vertically */
+.landing-index {
   display: flex;
   flex-direction: column;
   justify-content: center;
