@@ -1,5 +1,4 @@
 import { defineConfig } from "vocs";
-import "./styles.css";
 
 export default defineConfig({
 	title: "OBJECTS Docs",
