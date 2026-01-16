@@ -52,6 +52,26 @@ export default defineConfig({
 					light: "white",
 					dark: "#000000",
 				},
+				background2: {
+					light: "white",
+					dark: "#000000",
+				},
+				background3: {
+					light: "white",
+					dark: "#000000",
+				},
+				background4: {
+					light: "white",
+					dark: "#000000",
+				},
+				background5: {
+					light: "white",
+					dark: "#000000",
+				},
+				backgroundDark: {
+					light: "#f5f5f5",
+					dark: "#000000",
+				},
 			},
 		},
 	},

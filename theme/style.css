@@ -1,14 +1,15 @@
-/* Mobile viewport fix for landing page */
-/* position: fixed + inset: 0 fills viewport without scroll */
+/* Modern mobile viewport fix for landing page */
+/* Uses svh (small viewport height) for stable sizing with mobile browser UI */
+/* svh = viewport with address bar visible, prevents layout jumps */
 
 [data-layout="landing"] {
-  position: fixed;
-  inset: 0;
-  overflow: auto;
+  min-height: 100vh; /* Fallback for older browsers */
+  min-height: 100svh; /* Modern: stable height accounting for mobile browser UI */
 }
 
 [data-layout="landing"] .vocs_HomePage_root {
-  min-height: 100%;
+  min-height: 100vh; /* Fallback */
+  min-height: 100svh;
   display: flex;
   flex-direction: column;
   justify-content: center;
