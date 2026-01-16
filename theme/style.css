@@ -1,6 +1,5 @@
-/* Mobile viewport fix for landing page */
-/* Use fixed positioning with inset to fill viewport below nav - more performant than calc() */
-@media screen and (max-width: 1080px) {
+/* Mobile viewport: position landing page content below nav bar */
+@media (max-width: 1080px) {
   [data-layout="landing"] [class*="DocsLayout_content"] {
     position: fixed;
     inset: var(--vocs-topNav_height) 0 0 0;
@@ -8,7 +7,7 @@
   }
 }
 
-/* Center the homepage content vertically */
+/* Center homepage content vertically */
 [data-layout="landing"] .vocs_HomePage_root {
   display: flex;
   flex-direction: column;
