@@ -8,10 +8,10 @@
     height: 100%;
   }
 
-  /* Content fills space below nav bar */
-  :has(.landing-index) [class*="DocsLayout_content"] {
+  /* Layout container (nav + content + footer) fills viewport */
+  .vocs_DocsLayout_content:has(.landing-index) {
     position: fixed;
-    inset: var(--vocs-topNav_height) 0 0 0;
+    inset: 0;
   }
 }
 
