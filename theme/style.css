@@ -8,13 +8,25 @@
     height: 100%;
   }
 
-  /* Layout container (nav + content + footer) fills viewport */
+  /* Layout container fills viewport */
   .vocs_DocsLayout_content:has(.landing-index) {
     position: fixed;
     top: var(--vocs-topNav_height);
     left: 0;
     right: 0;
     bottom: env(safe-area-inset-bottom, 0);
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Main content area fills available space */
+  .vocs_DocsLayout_content:has(.landing-index) > * {
+    flex-shrink: 0;
+  }
+
+  .vocs_DocsLayout_content:has(.landing-index) .landing-index {
+    flex: 1;
+    min-height: 0;
   }
 }
 
