@@ -38,6 +38,14 @@ export default defineConfig({
 			light: "black",
 			dark: "white",
 		},
+		variables: {
+			color: {
+				background: {
+					light: "white",
+					dark: "#000000",
+				},
+			},
+		},
 	},
 	ogImageUrl:
 		"https://vocs.dev/api/og?logo=%logo&title=%title&description=%description",
