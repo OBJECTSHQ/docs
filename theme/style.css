@@ -1,23 +1,23 @@
-/* Mobile landing page: fit content to viewport */
+/* Mobile homepage: fit everything to viewport */
 @media (max-width: 1080px) {
-  /* Size document to dynamic viewport height */
-  html:has([data-layout="landing"]) {
+  /* Target pages with HomePage component */
+  html:has(.vocs_HomePage_root) {
     height: 100dvh;
   }
 
-  html:has([data-layout="landing"]) body {
+  html:has(.vocs_HomePage_root) body {
     height: 100%;
   }
 
-  /* Content area fills space below nav bar */
-  [data-layout="landing"] [class*="DocsLayout_content"] {
+  /* Fill entire viewport */
+  :has(.vocs_HomePage_root) [class*="DocsLayout_content"] {
     position: fixed;
-    inset: var(--vocs-topNav_height) 0 0 0;
+    inset: 0;
   }
 }
 
 /* Center homepage content vertically */
-[data-layout="landing"] .vocs_HomePage_root {
+.vocs_HomePage_root {
   display: flex;
   flex-direction: column;
   justify-content: center;
