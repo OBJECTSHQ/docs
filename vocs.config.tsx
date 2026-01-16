@@ -42,10 +42,7 @@ export default defineConfig({
 		},
 		variables: {
 			borderRadius: {
-				"0": "0",
-				"2": "2px",
-				"4": "4px",
-				"8": "8px",
+				round: "4px",
 			},
 			color: {
 				background: {

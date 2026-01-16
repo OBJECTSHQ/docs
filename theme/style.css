@@ -1,17 +1,16 @@
-/* Modern mobile viewport fix for landing page */
-/* Uses dvh (dynamic viewport height) that updates as mobile browser UI shows/hides */
-/* Flexbox ensures content fills space below navigation bar */
-
-[data-layout="landing"] {
-  min-height: 100vh; /* Fallback */
-  min-height: 100dvh;
-  display: flex;
-  flex-direction: column;
+/* Mobile viewport: position landing page content below nav bar */
+@media (max-width: 1080px) {
+  [data-layout="landing"] [class*="DocsLayout_content"] {
+    position: fixed;
+    inset: var(--vocs-topNav_height) 0 0 0;
+    overflow-y: auto;
+  }
 }
 
+/* Center homepage content vertically */
 [data-layout="landing"] .vocs_HomePage_root {
-  flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  min-height: 100%;
 }
