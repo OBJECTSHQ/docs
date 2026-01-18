@@ -11,7 +11,7 @@ description: An overview of OBJECTS—an open protocol for developing physical d
 - **Mobile-friendly**: Built on QUIC for reliable connectivity across network transitions and intermittent connections.
 - **User-owned**: One login, all your data. Switch apps instantly with a single account. Your projects follow you everywhere.
 - **Privacy-first**: Users control who accesses their data. Apps require explicit permission to read or sync your projects.
-- **Peer-to-peer**: Direct device-to-device communication. No intermediary required for data access or sync.
+- **Peer-to-peer**: Direct device-to-device communication. No intermediary required for data access or sync. (Initial nodes will be operated by OBJECTS Foundation)
 
 ## Key Features
 
