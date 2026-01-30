@@ -23,7 +23,7 @@ description: An overview of OBJECTS—an open protocol for developing physical d
 ## Use Cases
 
 - **Collaborative Design**: Real-time multi-user editing with automatic conflict resolution.
-- **Offline-first Apps**: Full functionality without connectivity, sync when available.
+- **Offline-first Apps**: Full functionality without connectivity, sync projects when available.
 - **Cross-app Workflows**: Users move designs between apps without export/import friction.
 
 ## Explore
