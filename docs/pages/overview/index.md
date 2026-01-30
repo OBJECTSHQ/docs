@@ -16,7 +16,7 @@ description: An overview of OBJECTS—an open protocol for developing physical d
 ## Key Features
 
 - **Portable Identity**: Passkey-based identity that works across all apps built on the protocol.
-- **Interoperable Data**: Shared data model allows apps to read and write the same design files.
+- **Interoperable Data**: Shared data model allows apps to read and write the same design projects.
 - **End-to-end Encrypted**: All data and communications encrypted by default. Apps can only access your data with your explicit permission.
 - **Permissionless**: Build and ship apps without platform approval or API keys. Launch with instant access to users who already have accounts and data. Skip user acquisition from scratch.
 
