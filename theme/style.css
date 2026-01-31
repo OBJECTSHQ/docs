@@ -1,16 +1,43 @@
-/* Mobile viewport: position landing page content below nav bar */
+/* Mobile landing index: fit page to viewport */
 @media (max-width: 1080px) {
-  [data-layout="landing"] [class*="DocsLayout_content"] {
+  html:has(.landing-index) {
+    height: 100dvh;
+    overflow: hidden;
+  }
+
+  html:has(.landing-index) body {
+    height: 100%;
+    overflow: hidden;
+  }
+
+  /* Layout container uses height instead of fixed bottom */
+  .vocs_DocsLayout_content:has(.landing-index) {
     position: fixed;
-    inset: var(--vocs-topNav_height) 0 0 0;
-    overflow-y: auto;
+    top: var(--vocs-topNav_height);
+    left: 0;
+    right: 0;
+    height: calc(100dvh - var(--vocs-topNav_height));
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+
+  /* Children don't shrink by default */
+  .vocs_DocsLayout_content:has(.landing-index) > * {
+    flex-shrink: 0;
+  }
+
+  /* Landing content fills and can shrink */
+  .vocs_DocsLayout_content:has(.landing-index) .landing-index {
+    flex: 1 1 auto;
+    min-height: 0;
+    overflow: hidden;
   }
 }
 
-/* Center homepage content vertically */
-[data-layout="landing"] .vocs_HomePage_root {
+/* Center landing index content vertically */
+.landing-index {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  min-height: 100%;
 }
