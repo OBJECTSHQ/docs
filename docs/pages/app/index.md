@@ -22,4 +22,4 @@ This documentation will guide you through:
 
 ## Coming Soon
 
-Content for this section is currently in development. Check back soon for comprehensive guides on building your first OBJECTS application.
+Content for this section is currently in development. Check back soon for guides on building your first OBJECTS application.
